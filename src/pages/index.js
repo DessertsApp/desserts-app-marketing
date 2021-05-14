@@ -1,4 +1,6 @@
 import * as React from "react"
+import './index.css'
+import { Typography } from '@material-ui/core'
 
 // styles
 const pageStyles = {
@@ -130,6 +132,9 @@ const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
+      <Typography variant="h1">
+        Cooper Black Header
+      </Typography>
       <h1 style={headingStyles}>
         Congratulations
         <br />
