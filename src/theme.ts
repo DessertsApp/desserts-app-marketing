@@ -7,8 +7,8 @@ const MuiTheme = createMuiTheme()
 export const colors = {
   text: '#4F4F4F',
   textLight: '#828282',
-  text30: '#C7C7C7',
-  text15: '#E5E5E5',
+  primary: '#D65078',
+  secondary: '#E7A04C',
 }
 export interface IColor {
   primary: string,
@@ -17,7 +17,7 @@ export interface IColor {
 
 //font families
 const Ubuntu = '"Ubuntu", sans-serif'
-const CooperBlack = 'cooper-black-std, serif'
+const CooperBlack = '"cooper-black-std", serif'
 
 //Mui Theme overrides
 export const myTheme = createMuiTheme({
@@ -34,27 +34,27 @@ export const myTheme = createMuiTheme({
   typography: {
     fontFamily: Ubuntu,
     h1: {
-      color: colors.text30,
+      color: colors.primary,
       fontFamily: CooperBlack,
       fontWeight: 400,
-      fontSize: '8em',
+      fontSize: '4em',
     },
     h2: {
-      color: colors.text,
+      color: colors.primary,
       fontFamily: CooperBlack,
       fontWeight: 400,
-      fontSize: '5.25em',
+      fontSize: '3em',
     },
-    subtitle1: {
-      color: colors.textLight,
+    h3: {
+      color: colors.primary,
       fontFamily: CooperBlack,
       fontWeight: 400,
-      fontSize: '3.25em',
+      fontSize: '1.5em',
     },
     body1: {
       color: colors.text,
       fontWeight: 300,
-      fontSize: '1.3em',
+      fontSize: '1em',
     },
     button: {
       fontWeight: 500,
