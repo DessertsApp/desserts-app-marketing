@@ -4,35 +4,34 @@ import { Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
 import mockupImg from "../images/desserts-app@2x.png"
-import { rootStyles } from "../theme"
 
 // styles
 const useStyles = makeStyles(theme => ({
   root: {
-    ...rootStyles,
     color: "#232129",
+    padding: 96,
   },
   img: {
-    width: "100%",
-    height: "auto"
+
   }
 }))
 
 // markup
-const IndexPage = () => {
+const Page2 = () => {
   const classes = useStyles()
 
   return (
     <Layout>
-      <title>Home Page</title>
+      <title>Page2</title>
       <Grid container alignContent="center" spacing={4} className={classes.root}>
-        <Grid item xs={5}>
+        <Grid item xs={6}>
           <Typography variant="h1">
-            Satisfy your sweet tooth
+            PAGE 2 HEADING
           </Typography>
         </Grid>
-        <Grid item xs={7}>
-          <img className={classes.img} alt="Gatsby G Logo" src={mockupImg} />
+        <Grid item xs={6}>
+          <img width="100%" height="auto" alt="Gatsby G Logo" src={mockupImg} />
+
         </Grid>
         <Grid item xs={12}>
           <Typography variant="h2">
@@ -55,4 +54,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default Page2

@@ -82,7 +82,7 @@ export const myTheme = createMuiTheme({
         color: colors.textLight,
       },
       text: {
-        padding: MuiTheme.spacing(1, 1.5)
+        padding: MuiTheme.spacing(1, 2.5)
       }
     },
     MuiChip: {
@@ -106,6 +106,8 @@ export const myTheme = createMuiTheme({
 
 //style variables
 export const styleVars = {
+  gutter: '11.11vw',
+  maxWidth: '1400px',
   navBar: '12vw',
   imgContainer: '48vw',
   contentContainer: '36vw',
@@ -114,12 +116,14 @@ export const styleVars = {
   contentContainerMobile: '126vw',
 }
 export const rootStyles = {
-  margin: 'auto',
-  paddingTop: styleVars.navBarMobile,
-  paddingBottom: '24vw',
+  margin: '0 auto',
+  paddingTop: styleVars.navBar,
+  paddingBottom: '16vw',
+  width: '77.77vw',
+  maxWidth: styleVars.maxWidth,
   [myTheme.breakpoints.up('sm')]: {
-    paddingTop: styleVars.navBar,
-    paddingBottom: '16vw',
+    paddingTop: '8em',
+    paddingBottom: '12em',
   }
 }
 
