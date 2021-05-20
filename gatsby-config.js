@@ -24,14 +24,14 @@ module.exports = {
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-material-ui",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     // {
     //   resolve: "gatsby-plugin-google-analytics",
     //   options: {
     //     trackingId: "",
     //   },
     // },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {

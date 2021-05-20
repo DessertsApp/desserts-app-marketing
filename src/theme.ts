@@ -37,7 +37,7 @@ export const myTheme = createMuiTheme({
       color: colors.primary,
       fontFamily: CooperBlack,
       fontWeight: 400,
-      fontSize: '4em',
+      fontSize: '3.4em',
     },
     h2: {
       color: colors.primary,
@@ -50,6 +50,12 @@ export const myTheme = createMuiTheme({
       fontFamily: CooperBlack,
       fontWeight: 400,
       fontSize: '1.5em',
+    },
+    subtitle1: {
+      color: colors.textLight,
+      fontWeight: 300,
+      fontSize: '1.1em',
+      lineHeight: 1.4,
     },
     body1: {
       color: colors.text,
@@ -97,9 +103,6 @@ export const myTheme = createMuiTheme({
       body1: {
         whiteSpace: 'pre-line',
       },
-      subtitle1: {
-        whiteSpace: 'nowrap',
-      },
     }
   }
 })
@@ -119,10 +122,10 @@ export const rootStyles = {
   margin: '0 auto',
   paddingTop: styleVars.navBar,
   paddingBottom: '16vw',
-  width: '77.77vw',
+  width: 'calc(7/9 * 100%)',
   maxWidth: styleVars.maxWidth,
   [myTheme.breakpoints.up('sm')]: {
-    paddingTop: '8em',
+    paddingTop: '4em',
     paddingBottom: '12em',
   }
 }

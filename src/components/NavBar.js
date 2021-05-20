@@ -49,7 +49,6 @@ const useStyles = makeStyles(theme => ({
 const NavBar = ({ siteTitle, menuLinks }) => {
   const classes = useStyles();
   const currPath = typeof window !== 'undefined' ? window.location.pathname : '';
-  console.log(currPath)
   return (
     <header className={classes.root}>
       <div className={classes.mainContainer} >
