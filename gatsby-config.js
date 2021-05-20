@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/desserts-app-marketing/",
+  pathPrefix: "/desserts-app-marketing",
   siteMetadata: {
     title: "Desserts App Marketing",
     menuLinks:[
