@@ -6,7 +6,7 @@ import classnames from "classnames"
 //images
 import logo from '../images/da-logo.png'
 import { colors, styleVars } from "../theme"
-import { Button } from "@material-ui/core"
+import { Button, Grid } from "@material-ui/core"
 // styles
 const useStyles = makeStyles(theme => ({
   root: {
@@ -16,11 +16,7 @@ const useStyles = makeStyles(theme => ({
   },
   mainContainer: {
     alignItems: 'center',
-    display: 'flex',
     height: '100%',
-    justifyContent: 'space-between',
-    margin: '0 auto',
-    width: '77.77vw',
     maxWidth: styleVars.maxWidth,
   },
   logoContainer: {
@@ -50,25 +46,34 @@ const NavBar = ({ siteTitle, menuLinks }) => {
   const classes = useStyles();
   const currPath = typeof window !== 'undefined' ? window.location.pathname : '';
   return (
-    <header className={classes.root}>
-      <div className={classes.mainContainer} >
-        <Link className={classes.logoContainer} to="/" >
-          <img className={classes.logo} src={logo} alt="Desserts App Logo" />
-        </Link>
-        <nav className={classes.linkContainer}>
-          {menuLinks.map(link => (
-            <Link to={link.link} key={link.name}>
-              <Button
-                className={classnames(
-                  classes.link, {[classes.currPage]: currPath === link.link}
-                )}
-              >
-                {link.name}
-              </Button>
-            </Link>
-          ))}
-        </nav>
-      </div>
+    <header>
+      <Grid className={classes.root} container justify="center">
+        <Grid
+          className={classes.mainContainer}
+          container
+          item
+          justify="space-between"
+          alignItems="center"
+          xs={9}
+        >
+          <Link className={classes.logoContainer} to="/" >
+            <img className={classes.logo} src={logo} alt="Desserts App Logo" />
+          </Link>
+          <nav className={classes.linkContainer}>
+            {menuLinks.map(link => (
+              <Link to={link.link} key={link.name}>
+                <Button
+                  className={classnames(
+                    classes.link, {[classes.currPage]: currPath === link.link}
+                  )}
+                >
+                  {link.name}
+                </Button>
+              </Link>
+            ))}
+          </nav>
+        </Grid>
+      </Grid>
     </header>
   )
 }

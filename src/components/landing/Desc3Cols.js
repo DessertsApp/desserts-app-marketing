@@ -28,7 +28,7 @@ const Desc3Cols = ({ title, description, items }) => {
             <Grid item xs={6}>
               <img
                 src={item.img}
-                alt="section title image"
+                alt="section title"
                 width="100%"
                 style={{borderRadius: "99px"}}
               />

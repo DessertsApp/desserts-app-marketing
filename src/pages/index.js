@@ -10,9 +10,12 @@ const useStyles = makeStyles(theme => ({
   root: {
     padding: "4em 0",
     color: "#232129",
+    maxWidth: "1440px",
+    margin: "0 auto",
   },
   jumbotron: {
-    flexBasis: '66vh',
+    flexBasis: '42em',
+    maxHeight: '42em',
     position: 'relative',
   },
   jumboheader: {
