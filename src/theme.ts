@@ -31,6 +31,20 @@ export const myTheme = createMuiTheme({
       xl: 1920,
     },
   },
+  palette: {
+    primary: {
+      light: '#de7393',
+      main: '#D65078',
+      dark: '#953854',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#ebb36f',
+      main: '#E7A04C',
+      dark: '#a17035',
+      contrastText: '#fff',
+    },
+  },
   typography: {
     fontFamily: Ubuntu,
     h1: {
@@ -43,13 +57,13 @@ export const myTheme = createMuiTheme({
       color: colors.primary,
       fontFamily: CooperBlack,
       fontWeight: 400,
-      fontSize: '3em',
+      fontSize: '2.6em',
     },
     h3: {
       color: colors.primary,
       fontFamily: CooperBlack,
       fontWeight: 400,
-      fontSize: '1.5em',
+      fontSize: '1.6em',
     },
     subtitle1: {
       color: colors.textLight,
@@ -86,6 +100,8 @@ export const myTheme = createMuiTheme({
     MuiButton: {
       root: {
         color: colors.textLight,
+        padding: MuiTheme.spacing(1, 2.5),
+        fontSize: '1em',
       },
       text: {
         padding: MuiTheme.spacing(1, 2.5)

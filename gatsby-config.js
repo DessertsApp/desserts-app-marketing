@@ -4,21 +4,21 @@ module.exports = {
     title: "Desserts App Marketing",
     menuLinks:[
       {
-          name:'home',
+          name:'',
           link:'/'
       },
-      {
-          name:'page2',
-          link:'/page-2'
-      },
-      {
-          name:'page3',
-          link:'/page-3'
-      },
-      {
-          name:'page3',
-          link:'/page-3'
-      },
+      // {
+      //     name:'page2',
+      //     link:'/page-2'
+      // },
+      // {
+      //     name:'page3',
+      //     link:'/page-3'
+      // },
+      // {
+      //     name:'page3',
+      //     link:'/page-3'
+      // },
     ]
   },
   plugins: [

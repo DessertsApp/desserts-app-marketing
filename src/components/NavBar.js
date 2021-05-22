@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const NavBar = ({ siteTitle, menuLinks }) => {
+const NavBar = ({ menuLinks }) => {
   const classes = useStyles();
   const currPath = typeof window !== 'undefined' ? window.location.pathname : '';
   return (

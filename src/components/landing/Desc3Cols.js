@@ -24,26 +24,36 @@ const Desc3Cols = ({ title, description, items }) => {
       </Grid>
       {
         items.map((item) => {
-          return(<Grid item container xs={4} direction="column" alignItems="center" spacing={1}>
-            <Grid item xs={6}>
-              <img
-                src={item.img}
-                alt="section title"
-                width="100%"
-                style={{borderRadius: "99px"}}
-              />
+          return(
+            <Grid
+              container
+              item
+              xs={4}
+              direction="column"
+              alignItems="center"
+              spacing={2}
+            >
+              <Grid item>
+                <img
+                  src={item.img}
+                  alt="section title"
+                  width="150px"
+                  height="150px"
+                  style={{borderRadius: "99%", objectFit: "cover"}}
+                />
+              </Grid>
+              <Grid item>
+                <Typography variant="h3" align="center">
+                  {item.name}
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography variant="body1">
+                    {item.text}
+                </Typography>
+              </Grid>
             </Grid>
-            <Grid item>
-              <Typography variant="h3">
-                {item.name}
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="body1">
-                  {item.text}
-              </Typography>
-            </Grid>
-          </Grid>)
+          )
         })
       }
     </Grid>
