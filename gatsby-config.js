@@ -24,8 +24,19 @@ module.exports = {
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-material-ui",
-    "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Desserts App",
+        short_name: "Desserts App",
+        start_url: "/",
+        display: "standalone",
+        icon: "src/images/icon.png",
+        crossOrigin: `use-credentials`,
+      },
+    },
     // {
     //   resolve: "gatsby-plugin-google-analytics",
     //   options: {

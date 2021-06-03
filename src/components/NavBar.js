@@ -54,24 +54,29 @@ const NavBar = ({ menuLinks }) => {
           item
           justify="space-between"
           alignItems="center"
-          xs={9}
+          xs={11}
+          md={9}
         >
-          <Link className={classes.logoContainer} to="/" >
-            <img className={classes.logo} src={logo} alt="Desserts App Logo" />
-          </Link>
-          <nav className={classes.linkContainer}>
-            {menuLinks.map(link => (
-              <Link to={link.link} key={link.name}>
-                <Button
-                  className={classnames(
-                    classes.link, {[classes.currPage]: currPath === link.link}
-                  )}
-                >
-                  {link.name}
-                </Button>
-              </Link>
-            ))}
-          </nav>
+          <Grid className={classes.logoContainer} item>
+            <Link to="/" >
+              <img className={classes.logo} src={logo} alt="Desserts App Logo" />
+            </Link>
+          </Grid>
+          {/* <Grid item>
+            <nav className={classes.linkContainer}>
+              {menuLinks.map(link => (
+                <Link to={link.link} key={link.name}>
+                  <Button
+                    className={classnames(
+                      classes.link, {[classes.currPage]: currPath === link.link}
+                    )}
+                  >
+                    {link.name}
+                  </Button>
+                </Link>
+              ))}
+            </nav>
+          </Grid> */}
         </Grid>
       </Grid>
     </header>
