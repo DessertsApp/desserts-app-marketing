@@ -22,13 +22,13 @@ const InfoSections = ({ infoProps }) => {
   //emailJS function
   function sendEmail(e) {
     e.preventDefault();
-
     emailjs.sendForm(process.env.GATSBY_SERVICE_ID, process.env.GATSBY_TEMPLATE_ID, e.target, process.env.GATSBY_USER_ID)
       .then((result) => {
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
       });
+    alert('Your email was successfully sent!');
   }
   return (
     <Grid container item justify="center" spacing={4}>
