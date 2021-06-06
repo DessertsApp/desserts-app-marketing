@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/desserts-app-marketing",
+  pathPrefix: "/",
   siteMetadata: {
     title: "Desserts App Marketing",
     menuLinks:[
@@ -19,7 +19,8 @@ module.exports = {
       //     name:'page3',
       //     link:'/page-3'
       // },
-    ]
+    ],
+    siteUrl: 'http://www.desserts.app/',
   },
   plugins: [
     "gatsby-plugin-image",
@@ -37,6 +38,7 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+    'gatsby-plugin-cname',
     // {
     //   resolve: "gatsby-plugin-google-analytics",
     //   options: {
