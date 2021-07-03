@@ -1,23 +1,27 @@
 import * as React from "react"
 import Layout from "../layout/layout"
-import { Box, Button, Grid, Paper, Typography } from '@material-ui/core'
+import { Box, Grid, Paper, Typography } from '@material-ui/core'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
+import { StaticImage } from "gatsby-plugin-image"
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import InfoSections from '../components/landing/InfoSections'
-import { StaticImage } from "gatsby-plugin-image"
+// images 
+import imgBrowse from "../images/mockup-browse.png"
+import imgCustomize from "../images/mockup-customize.png"
+import imgOrder from "../images/mockup-order.png"
 
 // styles
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: "2em 0",
     color: "#232129",
+    paddingTop: "2em",
     maxWidth: "100vw",
     margin: 0,
     [theme.breakpoints.up('sm')]: {
-      padding: "3em 0",
+      paddingTop: "3em",
     },
     [theme.breakpoints.up('md')]: {
-      padding: "4em 0",
+      paddingTop: "4em",
       margin: "0 auto",
       maxWidth: "1440px",
     }
@@ -78,8 +82,8 @@ const IndexPage = () => {
   const classes = useStyles()
 
   //test for mobile
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <Layout>
@@ -110,7 +114,7 @@ const IndexPage = () => {
           </Grid>
           <Grid item sm={7}>
             <Typography variant="subtitle1">
-              An all-in-one mobile ordering app that makes it easy to purchase and fully customize your desserts to match your tastes.
+              The all-in-one mobile ordering app that makes it easy to purchase and fully customize your desserts to match your tastes.
           </Typography>
           </Grid>
           {/* <Grid container item direction="column" md={7} spacing={2}>
@@ -130,8 +134,8 @@ const IndexPage = () => {
           <Paper className={classes.body} elevation={6}>
             <Grid container direction="column" spacing={10}>
               <InfoSections infoProps={whatWeDo} />
-              <InfoSections infoProps={whatMakesUsDifferent} />
-              <InfoSections infoProps={emailMessenger} />
+              <InfoSections infoProps={whatMakesUsDifferent} round/>
+              {/* <InfoSections infoProps={emailMessenger} /> */}
             </Grid>
           </Paper>
         </Grid>
@@ -144,22 +148,22 @@ export default IndexPage
 
 //section text
 const whatWeDo = {
-  title: "What do we do?",
+  title: "How does it work?",
   description: "We envision offering all types of desserts on our platform and making those with specific tastes accessible and customizable. You won't be limited anymore by your particular needs or dietary choices.",
   items: [{
     name: "Browse",
     text: "Browse local businesses and their full menu, including daily specials and other limited items, without feeling like you're missing out by shopping online.",
-    img: "https://images.unsplash.com/photo-1601205741712-b261aff33a7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=629&q=80"
+    img: imgBrowse
   },
   {
     name: "Customize",
     text: "Tailor each item to your needs, whether it's allergies, dietary restrictions or just to your tastes.",
-    img: "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+    img: imgCustomize
   },
   {
     name: "Order",
     text: "Securely place orders for either pick-up or delivery with our straightforward and transparent order process.",
-    img: "https://images.unsplash.com/photo-1603465409238-d0c3cde34a96?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80"
+    img: imgOrder
   }]
 };
 const whatMakesUsDifferent = {

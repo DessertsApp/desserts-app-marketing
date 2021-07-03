@@ -40,12 +40,12 @@ const useStyles = makeStyles(theme => ({
 }))
 
 // markup
-const Page2 = () => {
+const About = () => {
   const classes = useStyles()
 
   return (
     <Layout>
-      <title>Home Page</title>
+      <title>About Us</title>
       <Grid container alignContent="center" spacing={4} className={classes.root}>
         <Grid container item className={classes.jumbotron}>
           <Grid container item xs={7} direction="column" spacing={3}>
@@ -86,4 +86,4 @@ const Page2 = () => {
   )
 }
 
-export default Page2
+export default About
