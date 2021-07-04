@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const emailForm = ({ infoProps }) => {
+const EmailForm = ({ infoProps }) => {
   const classes = useStyles();
   const { title, description, items, emailForm } = infoProps;
   //emailJS function
@@ -44,43 +44,6 @@ const emailForm = ({ infoProps }) => {
             { description }
         </Typography>
       </Grid>
-      { items ?
-        items.map((item) => {
-          return(
-            <Grid
-              container
-              item
-              xs={12}
-              md={4}
-              direction="column"
-              alignItems="center"
-              spacing={2}
-            >
-              <Grid item>
-                <img
-                  src={item.img}
-                  alt="section title"
-                  width="150px"
-                  height="150px"
-                  style={{borderRadius: "99%", objectFit: "cover"}}
-                />
-              </Grid>
-              <Grid item>
-                <Typography variant="h3" align="center">
-                  {item.name}
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant="body1">
-                    {item.text}
-                </Typography>
-              </Grid>
-            </Grid>
-          )
-        }) : null
-      }
-      {
-        emailForm ?
         <Grid item xs={12}>
           <form style={{width: "100%"}} onSubmit={sendEmail}>
             <Grid className={classes.formContainer} item container xs={12} justify="center" spacing={4}>
@@ -121,9 +84,8 @@ const emailForm = ({ infoProps }) => {
               </Grid>
             </Grid>
           </form>
-        </Grid> : null
-      }
+        </Grid>
     </Grid>
   )
 }
-export default emailForm
+export default EmailForm
