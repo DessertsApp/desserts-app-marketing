@@ -5,7 +5,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles'
 import { StaticImage } from "gatsby-plugin-image"
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import InfoSections from '../components/landing/InfoSections'
-// images 
+// images
 import imgBrowse from "../images/mockup-browse.png"
 import imgCustomize from "../images/mockup-customize.png"
 import imgOrder from "../images/mockup-order.png"
@@ -30,13 +30,11 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     marginBottom: "1em",
     [theme.breakpoints.up('sm')]: {
-      flexBasis: '28em',
-      maxHeight: '28em',
+      height: '28em',
       marginBottom: "initial",
     },
     [theme.breakpoints.up('md')]: {
-      flexBasis: '42em',
-      maxHeight: '42em',
+      height: '42em',
     }
   },
   jumboheader: {
@@ -88,17 +86,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <title>Home Page</title>
-      <Grid className={classes.root} container alignItems="center" direction="column" spacing={4} >
-        <Grid
-          className={classes.jumbotron}
-          container
-          item
-          direction="column"
-          spacing={isMobile?2:4}
-          xs={12}
-          sm={11}
-          md={9}
-        >
+      <Grid className={classes.root} container justify="center" spacing={4} >
+        <Grid className={classes.jumbotron} container item alignItems="flex-start" xs={12} sm={11} md={9}>
           <Box className={classes.img}>
             <StaticImage
               src="../images/desserts-app@2x.png"
@@ -107,15 +96,17 @@ const IndexPage = () => {
               placeholder="tracedSVG"
             />
           </Box>
-          <Grid item sm={7}>
-            <Typography className={classes.jumboheader} variant="h1">
-              Satisfy your sweet tooth
-            </Typography>
-          </Grid>
-          <Grid item sm={7}>
-            <Typography variant="subtitle1">
-              The all-in-one mobile ordering app that makes it easy to purchase and fully customize your desserts to match your tastes.
-          </Typography>
+          <Grid container item direction="column" spacing={isMobile?2:4}>
+            <Grid item sm={6}>
+              <Typography className={classes.jumboheader} variant="h1">
+                Satisfy your sweet tooth
+              </Typography>
+            </Grid>
+            <Grid item sm={6}>
+              <Typography variant="subtitle1">
+                The all-in-one mobile ordering app that makes it easy to purchase and fully customize your desserts to match your tastes.
+              </Typography>
+            </Grid>
           </Grid>
           {/* <Grid container item direction="column" md={7} spacing={2}>
             <Grid item>

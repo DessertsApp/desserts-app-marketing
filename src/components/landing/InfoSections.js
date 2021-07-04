@@ -8,11 +8,6 @@ const useStyles = makeStyles(theme => ({
       fontSize: "2em"
     }
   },
-  formContainer: {
-    [theme.breakpoints.down('md')]: {
-      margin: 0,
-    }
-  }
 }))
 
 const InfoSections = ({ infoProps, round }) => {

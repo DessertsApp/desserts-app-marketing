@@ -54,7 +54,7 @@ const Contact = () => {
   return (
     <Layout>
       <title>Contact Us</title>
-      <Grid className={classes.root} container alignItems="center" direction="column" spacing={4} >
+      <Grid className={classes.root} container justify="center" spacing={4} >
         <Grid
           className={classes.jumbotron}
           container

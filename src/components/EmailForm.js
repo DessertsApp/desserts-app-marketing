@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 
 const EmailForm = ({ infoProps }) => {
   const classes = useStyles();
-  const { title, description, items, emailForm } = infoProps;
+  const { title, description} = infoProps;
   //emailJS function
   function sendEmail(e) {
     e.preventDefault();
