@@ -1,12 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import classnames from "classnames"
 //images
 import logo from '../images/da-logo.png'
 import { colors, styleVars } from "../theme"
 import { Button, Grid } from "@material-ui/core"
+import NavDrawerMobile from "./NavDrawerMobile"
+
 // styles
 const useStyles = makeStyles(theme => ({
   root: {
@@ -42,9 +45,32 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
+const NavBarLinks = ({menuLinks}) => {
+  const classes = useStyles()
+  const currPath = typeof window !== 'undefined' ? window.location.pathname : ''
+
+  return (
+    <>
+      { menuLinks.map(link => (
+        <Link to={link.link} key={link.name}>
+          <Button
+            className={classnames(
+              classes.link, {[classes.currPage]: currPath === link.link}
+            )}
+          >
+            {link.name}
+          </Button>
+        </Link>
+      )) }
+    </>
+  )
+}
+
 const NavBar = ({ menuLinks }) => {
-  const classes = useStyles();
-  const currPath = typeof window !== 'undefined' ? window.location.pathname : '';
+  const classes = useStyles()
+  const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down('xs'))
+
   return (
     <header>
       <Grid className={classes.root} container justify="center">
@@ -64,17 +90,10 @@ const NavBar = ({ menuLinks }) => {
           </Grid>
           <Grid item>
             <nav className={classes.linkContainer}>
-              {menuLinks.map(link => (
-                <Link to={link.link} key={link.name}>
-                  <Button
-                    className={classnames(
-                      classes.link, {[classes.currPage]: currPath === link.link}
-                    )}
-                  >
-                    {link.name}
-                  </Button>
-                </Link>
-              ))}
+              { isMobile ?
+                <NavDrawerMobile menuLinks={menuLinks} /> :
+                <NavBarLinks menuLinks={menuLinks}/>
+              }
             </nav>
           </Grid>
         </Grid>

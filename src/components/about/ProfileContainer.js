@@ -13,7 +13,7 @@ const ProfileContainer = ({ profiles }) => {
                 alt={profile.name + "'s profile picture"}
                 width="200px"
                 height="200px"
-                style={{bobjectFit: "cover"}}
+                style={{objectFit: "contain"}}
               />
             </Grid>
             <Grid item>

@@ -77,7 +77,8 @@ export const myTheme = createMuiTheme({
       fontSize: '1em',
     },
     button: {
-      fontWeight: 500,
+      color: "white",
+      fontWeight: 700,
       fontSize: '1.5em',
     }
   },
