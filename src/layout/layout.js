@@ -26,6 +26,7 @@ const Layout = ({ children }) => {
                 name
                 link
               }
+              siteUrl
             }
           }
         }

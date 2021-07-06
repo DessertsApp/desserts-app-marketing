@@ -44,7 +44,7 @@ const Footer = () => {
     },
     {
       icon: 'tiktok',
-      url: ''
+      url: 'http://tiktok.com/@dessertsapp'
     },
     {
       icon: 'pinterest-p',

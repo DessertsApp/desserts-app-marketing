@@ -16,7 +16,7 @@ module.exports = {
           link:'/contact'
       },
     ],
-    siteUrl: 'http://www.desserts.app/',
+    siteUrl: 'http://desserts.app/',
   },
   plugins: [
     "gatsby-plugin-image",
@@ -35,12 +35,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-cname',
-    // {
-    //   resolve: "gatsby-plugin-google-analytics",
-    //   options: {
-    //     trackingId: "",
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-199286140-1",
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

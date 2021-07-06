@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import classnames from "classnames"
+import { useLocation } from '@reach/router';
 //images
 import logo from '../images/da-logo.png'
 import { colors, styleVars } from "../theme"
@@ -45,9 +46,10 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const NavBarLinks = ({menuLinks}) => {
+const NavBarLinks = ({ menuLinks }) => {
   const classes = useStyles()
-  const currPath = typeof window !== 'undefined' ? window.location.pathname : ''
+  const location = useLocation()
+  const currPath = location ? location.pathname : '/'
 
   return (
     <>

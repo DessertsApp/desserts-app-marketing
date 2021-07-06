@@ -126,7 +126,6 @@ const IndexPage = () => {
             <Grid container direction="column" spacing={10}>
               <InfoSections infoProps={whatWeDo} />
               <InfoSections infoProps={whatMakesUsDifferent} round/>
-              {/* <InfoSections infoProps={emailMessenger} /> */}
             </Grid>
           </Paper>
         </Grid>
@@ -173,9 +172,4 @@ const whatMakesUsDifferent = {
     text: "We know that it can be intimidating to make complex orders online. Our app makes sure that you exactly know what you're getting every time.",
     img: "https://images.unsplash.com/photo-1522125670776-3c7abb882bc2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
   }]
-}
-const emailMessenger = {
-  title: "Connect with us!",
-  description: "Reach out to our team if you have any questions or want to make a business inquiry.",
-  emailForm: true
 }

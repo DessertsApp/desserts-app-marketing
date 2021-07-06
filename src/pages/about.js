@@ -1,8 +1,7 @@
 import * as React from "react"
 import Layout from "../layout/layout"
-import { Box, Grid, Paper, Typography } from '@material-ui/core'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { Grid, Paper } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
 
 // profile pictures
 import {
@@ -53,10 +52,6 @@ const useStyles = makeStyles(theme => ({
 // markup
 const About = () => {
   const classes = useStyles()
-
-  //test for mobile
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <Layout>
