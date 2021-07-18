@@ -59,7 +59,7 @@ const Footer = () => {
           <IconButton
             color="primary"
             aria-label={brand.icon}
-            href={brand.url}
+            onClick={() => window.open(brand.url, "_blank")}
           >
             <FontAwesomeIcon className={classes.button} icon={['fab', brand.icon]} />
           </IconButton>

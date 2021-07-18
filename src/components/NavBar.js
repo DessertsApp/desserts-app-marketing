@@ -87,7 +87,7 @@ const NavBar = ({ menuLinks }) => {
         >
           <Grid className={classes.logoContainer} item>
             <Link to="/" >
-              <img className={classes.logo} src={logo} alt="Desserts App Logo" />
+              <img className={classes.logo} src={logo} alt="Desserts App" />
             </Link>
           </Grid>
           <Grid item>
