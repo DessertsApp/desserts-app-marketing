@@ -9,6 +9,7 @@ import InfoSections from '../components/landing/InfoSections'
 import imgBrowse from "../images/mockup-browse.png"
 import imgCustomize from "../images/mockup-customize.png"
 import imgOrder from "../images/mockup-order.png"
+import MailchimpForm from "../components/MailchimpForm"
 
 // styles
 const useStyles = makeStyles(theme => ({
@@ -126,6 +127,7 @@ const IndexPage = () => {
             <Grid container direction="column" spacing={10}>
               <InfoSections infoProps={whatWeDo} />
               <InfoSections infoProps={whatMakesUsDifferent} round/>
+              <MailchimpForm />
             </Grid>
           </Paper>
         </Grid>
