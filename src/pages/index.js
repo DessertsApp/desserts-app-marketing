@@ -9,6 +9,9 @@ import InfoSections from '../components/landing/InfoSections'
 import imgBrowse from "../images/mockup-browse.png"
 import imgCustomize from "../images/mockup-customize.png"
 import imgOrder from "../images/mockup-order.png"
+import imgCupcake from "../images/cupcake.png"
+import imgStore from "../images/store.png"
+import imgMobile from "../images/mobile.png"
 import MailchimpForm from "../components/MailchimpForm"
 
 // styles
@@ -164,14 +167,14 @@ const whatMakesUsDifferent = {
   items: [{
     name: "Made for desserts",
     text: "We work closely with dessert shops and bakeries to ensure you have the full range of options available for your orders. We know that every detail matters, no matter how small.",
-    img: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80"
+    img: imgCupcake
   },{
-    name: "Support local businesses",
+    name: "Supporting local businesses",
     text: "We want to connect our community with the amazing group of small businesses around them. Sometimes the best things are hidden in plain sight.",
-    img: "https://images.unsplash.com/photo-1532635224-cf024e66d122?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+    img: imgStore
   },{
-    name: "Ease of Use",
+    name: "Simple yet powerful",
     text: "We know that it can be intimidating to make complex orders online. Our app makes sure that you exactly know what you're getting every time.",
-    img: "https://images.unsplash.com/photo-1522125670776-3c7abb882bc2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+    img: imgMobile
   }]
 }
