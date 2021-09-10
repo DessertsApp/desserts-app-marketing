@@ -6,15 +6,14 @@ import { makeStyles } from '@material-ui/core/styles'
 // profile pictures
 import {
   ahmet,
-  aybars,
   chris,
-  cindy,
   ismet,
   max,
   ozan,
   viktor,
   louise,
-  loki
+  loki,
+  muhammad
 } from '../images/profile-pictures'
 import SectionTitle from "../components/SectionTitle";
 import PageTitle from "../components/PageTitle";
@@ -103,25 +102,20 @@ const teamMembers = [
     pfp: max
   },
   {
+    name: "Muhammad",
+    title: "Software Developer",
+    pfp: muhammad
+  },
+  {
     name: "Chris",
     title: "Head Product Designer",
     pfp: chris
   },
   {
-    name: "Aybars",
-    title: "Software Developer",
-    pfp: aybars
-  },
-  {
-    name: "Cindy",
-    title: "Head of Marketing",
-    pfp: cindy
-  },
-  {
     name: "Ozan",
-    title: "Graphic Designer",
+    title: "Marketing & Graphics",
     pfp: ozan
-  }
+  },
 ]
 
 const pets = [
