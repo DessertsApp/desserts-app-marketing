@@ -134,16 +134,31 @@ export const styleVars = {
   navBarMobile: '24vw',
   imgContainerMobile: '150vw',
   contentContainerMobile: '126vw',
+  paperRadius: '12px',
 }
 export const rootStyles = {
-  margin: '0 auto',
-  paddingTop: styleVars.navBar,
-  paddingBottom: '16vw',
-  width: 'calc(7/9 * 100%)',
-  maxWidth: styleVars.maxWidth,
+  color: "#232129",
+    paddingTop: "2em",
+    maxWidth: "100vw",
+    margin: 0,
+    [myTheme.breakpoints.up('sm')]: {
+      paddingTop: "3em",
+    },
+    [myTheme.breakpoints.up('md')]: {
+      paddingTop: "4em",
+      margin: "0 auto",
+      maxWidth: "1440px",
+    }
+}
+export const paperStyles = {
+  borderRadius: styleVars.paperRadius,
+  padding: "3em 16px 4em",
+  overflow: "hidden",
   [myTheme.breakpoints.up('sm')]: {
-    paddingTop: '4em',
-    paddingBottom: '12em',
+    padding: '6em calc(1/12 * 100%)',
+  },
+  [myTheme.breakpoints.up('md')]: {
+    padding: '6em calc(1/12 * 100%) 12em',
   }
 }
 

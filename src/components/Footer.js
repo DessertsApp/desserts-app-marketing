@@ -2,6 +2,8 @@ import React from "react"
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Typography, IconButton } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { colors } from "../theme"
+import { Link } from "gatsby"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -12,12 +14,16 @@ const useStyles = makeStyles(theme => ({
     minWidth: "1em",
   },
   copyright: {
-    alignContent: "center",
     padding: 12,
     [theme.breakpoints.up('sm')]: {
-      justifyContent: "flex-end",
       flexGrow: 1,
-      width: 0,
+      width: "fit-content",
+      justifyContent: "flex-end",
+      textAlign: "right",
+    },
+    '& a': {
+      color: colors.primary,
+      textDecoration: "underline",
     }
   }
 }))
@@ -53,7 +59,7 @@ const Footer = () => {
   ]
 
   return (
-    <Grid container className={classes.root} md={10} xs={12}>
+    <Grid container className={classes.root} alignItems="center" md={10} xs={12}>
       { brands.map((brand) => (
         <Grid item>
           <IconButton
@@ -66,9 +72,13 @@ const Footer = () => {
         </Grid>
       ))
       }
-      <Grid container item className={classes.copyright} alignSelf="end">
+      <Grid item className={classes.copyright} container>
         <Typography variant="subtitle1">
-          &copy; Desserts App 2021
+          &copy; Desserts App 2021 <br/>
+          77 King Street West, Suite 3000 <br/>
+          Toronto, ON, M5K 1G8 <br/><br/>
+          <Link to="/terms">Terms of Service</Link><br/>
+          <Link to="/privacy">Privacy Policy</Link>
         </Typography>
       </Grid>
     </Grid>
