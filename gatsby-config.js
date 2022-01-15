@@ -51,6 +51,11 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
-    },
+    }, {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-T5ZRX6F",
+      }
+    }
   ],
 };
