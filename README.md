@@ -18,6 +18,7 @@
     cd desserts-app-marketing/
     npm run develop
     ```
+    <mark>*Note: </mark> For `EmailForm.js` to work you must set env variables for `.env.development` and `.env.production`. Found on Emailjs dashboard with `thedessertsapp@gmail.com`.
 
 3.  **See live changes from the browser**
 
@@ -35,4 +36,4 @@
     npm run deploy
     ```
 
-    - [Gatsby gh-pages docs](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages/)
+    See more here -> [Gatsby gh-pages docs](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages/)

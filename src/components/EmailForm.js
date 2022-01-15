@@ -24,6 +24,7 @@ const EmailForm = ({ infoProps }) => {
   //emailJS function
   function sendEmail(e) {
     e.preventDefault();
+    // Found in Emailjs dashboard for thedessertsapp@gmail.com
     emailjs.sendForm(process.env.GATSBY_SERVICE_ID, process.env.GATSBY_TEMPLATE_ID, e.target, process.env.GATSBY_USER_ID)
       .then((result) => {
           console.log(result.text);
@@ -75,6 +76,7 @@ const EmailForm = ({ infoProps }) => {
               </Grid>
               <Grid container item justify="flex-end" xs={12} md={10}>
                 <Button
+                id="send-email-button"
                   variant="contained"
                   type="submit"
                   color="primary"
