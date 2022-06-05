@@ -13,6 +13,7 @@ import imgCupcake from "../images/cupcake.png"
 import imgStore from "../images/store.png"
 import imgMobile from "../images/mobile.png"
 import MailchimpForm from "../components/MailchimpForm"
+import DemoButton from "../components/DemoButton"
 
 // styles
 const useStyles = makeStyles(theme => ({
@@ -110,6 +111,9 @@ const IndexPage = () => {
               <Typography variant="subtitle1">
                 The all-in-one mobile ordering app that makes it easy to purchase and fully customize your desserts to match your tastes.
               </Typography>
+            </Grid>
+            <Grid item sm={6}>
+              <DemoButton />
             </Grid>
           </Grid>
           {/* <Grid container item direction="column" md={7} spacing={2}>
