@@ -19,6 +19,10 @@ module.exports = {
           name:'Contact',
           link:'/contact'
       },
+      {
+        name:'register',
+        link:'/register'
+      },
     ],
     siteUrl: 'http://desserts.app/',
   },
