@@ -7,7 +7,7 @@
 1.  **Clone from Git and install dependancies**
 
     ```shell
-    npm install
+    yarn
     ```
 
 2.  **Starting the developer environment**
@@ -16,7 +16,7 @@
 
     ```shell
     cd desserts-app-marketing/
-    npm run develop
+    yarn start
     ```
     <mark>*Note: </mark> For `EmailForm.js` to work you must set env variables for `.env.development` and `.env.production`. Found on Emailjs dashboard with `thedessertsapp@gmail.com`.
 
@@ -33,7 +33,7 @@
     Using the `gh-pages` plugin we can build our site and publish it on a seperate (gh-pages) branch to utilize Github Pages for hosting.
 
     ```shell
-    npm run deploy
+    yarn deploy
     ```
 
     See more here -> [Gatsby gh-pages docs](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-with-github-pages/)
