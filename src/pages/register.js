@@ -4,6 +4,7 @@ import { Box,  Grid, Paper, Typography } from '@material-ui/core'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import RegisterForm from '../components/registerForm'
+// import back from '../components/back'
 import { StaticImage } from "gatsby-plugin-image"
 import { color } from "@mui/system";
 
