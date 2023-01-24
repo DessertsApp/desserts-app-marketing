@@ -20,7 +20,7 @@ module.exports = {
           link:'/contact'
       },
       {
-        name:'register',
+        name:'Vendors',
         link:'/register'
       },
     ],

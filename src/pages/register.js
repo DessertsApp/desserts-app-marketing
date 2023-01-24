@@ -7,6 +7,10 @@ import RegisterForm from '../components/registerForm'
 // import back from '../components/back'
 import { StaticImage } from "gatsby-plugin-image"
 import { color } from "@mui/system";
+import imgBrowse from "../images/mockup-browse.png"
+import imgCustomize from "../images/mockup-customize.png"
+import imgOrder from "../images/mockup-order.png"
+import InfoSections from '../components/landing/InfoSections'
 
 
 // styles
@@ -89,20 +93,21 @@ const Register = () => {
           </Box>
           
             <Typography variant="h1">
-              Vendors Register your bakery with us!
+            Sweet Spot for Bakeries & Dessert Shops!
             </Typography>
           </Grid>
           <Grid item>
             <Typography variant="subtitle1">
-              Provide us with basic information about your bakery/business and we will email you with information about the bakery sign up process. We are looking forward to working with you! <span role="img" aria-label="smile">😊</span>
+            Partner with Desserts App to save time taking custom orders and drive more sales. Swiftly sell sweets in seconds! <span role="img" aria-label="smile">😊</span>
             </Typography>
           </Grid>
           <Grid item /*xs={12} md={11}*/>
           <Paper className={classes.body} elevation={6}>
             <Grid container direction="column" spacing={10}>
+            <InfoSections infoProps={whatWeDo} />
               <RegisterForm infoProps={{
-                title: "Get Started with a Desserts App partnership!",
-                description: "Feel free to go to the contact page if you have any questions about the process. We will try to connect with you as soon as possible once registered!"
+                title: "Let's Get Started!",
+                description: "Provide us with basic information about your business, and we will contact you immediately and sign you up"
               }} />
             </Grid>
           </Paper>
@@ -114,3 +119,23 @@ const Register = () => {
 }
 
 export default Register
+
+const whatWeDo = {
+  title: "How does it work?",
+  description: "We envision offering all types of desserts on our platform and making those with specific tastes accessible and customizable. You won't be limited anymore by your particular needs or dietary choices.",
+  items: [{
+    name: "Browse",
+    text: "Browse local businesses and their full menu, including daily specials and other limited items, without feeling like you're missing out by shopping online.",
+    img: imgBrowse
+  },
+  {
+    name: "Customize",
+    text: "Tailor each item to your needs, whether it's allergies, dietary restrictions or just to your tastes.",
+    img: imgCustomize
+  },
+  {
+    name: "Order",
+    text: "Securely place orders for either pick-up or delivery with our straightforward and transparent order process.",
+    img: imgOrder
+  }]
+};
